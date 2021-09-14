@@ -7,6 +7,6 @@
 ## 安裝&操作
 1.開啟終端機，並透過clone載下此專案。
 <br>
-git clone https://github.com/JACKY6450/Vue-Date-TodoList.git
+`git clone https://github.com/JACKY6450/Weather-ForcastApp.git`
 <br><br>
 2.打開index.htm開始玩看看吧
