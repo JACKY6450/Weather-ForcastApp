@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" media="all"></link>
+    <title>中央氣象局Api 天氣預報&天氣觀測&氣候</title>
+</head>
+<body>
+    <div class="header">
+        天氣預報&觀測APP
+    </div>
+    <div class="app">     
+        <div class="menu">
+            <h2>未來36hr天氣資訊</h2>
+            請選擇縣市 : 
+            <select name="" id="city" class="city">
+                <option value="臺北市">臺北市</option>       
+                <option value="新北市">新北市</option>
+                <option value="基隆市">基隆市</option>
+                <option value="桃園市">桃園市</option>
+                <option value="新竹市">新竹市</option>
+                <option value="新竹縣">新竹縣</option>
+                <option value="苗栗縣">苗栗縣</option>
+                <option value="臺中市">臺中市</option>
+                <option value="彰化縣">彰化縣</option>
+                <option value="南投縣">南投縣</option>
+                <option value="雲林縣">雲林縣</option>
+                <option value="嘉義市">嘉義市</option>
+                <option value="嘉義縣">嘉義縣</option>
+                <option value="臺南市">臺南市</option>
+                <option value="高雄市">高雄市</option>
+                <option value="屏東縣">屏東縣</option>
+                <option value="宜蘭縣">宜蘭縣</option>
+                <option value="花蓮縣">花蓮縣</option>
+                <option value="臺東縣">臺東縣</option>
+                <option value="澎湖縣">澎湖縣</option>
+                <option value="金門縣">金門縣</option>
+                <option value="連江縣">連江縣</option>
+            </select>
+            請選擇時間 : 
+            <select name="" id="time" class="time">
+                <option value="0"></option>
+                <option value="1"></option>
+                <option value="2"></option>
+            </select>
+            <input type="button" value="送出" onclick="sendout()">
+            <!-- <input type="button" value="清除資料" onclick="cleardata()"> -->
+        </div>
+        
+        <div class="databox">
+            <!-- <div class="dataitem">
+                <img src="" alt="">
+                <h2>台北市</h2>
+                <table>
+                    <tr>
+                        <td>Sart Time</td>
+                        <td>Lorem, ipsum dolor.</td>
+                    </tr>
+                    <tr>
+                        <td>End Time</td>
+                        <td>Lorem, ipsum dolor.</td>
+                    </tr>
+                    <tr>
+                        <td>天氣狀況</td>
+                        <td>Lorem, ipsum dolor.</td>
+                    </tr>
+                    <tr>
+                        <td>最低溫(C)</td>
+                        <td>Lorem, ipsum dolor.</td>
+                    </tr>
+                    <tr>
+                        <td>最高溫(C)</td>
+                        <td>Lorem, ipsum dolor.</td>
+                    </tr>
+                    <tr>
+                        <td>降雨機率(%)</td>
+                        <td>Lorem, ipsum dolor.</td>
+                    </tr>
+                    <tr>
+                        <td>舒適度</td>
+                        <td>Lorem, ipsum dolor.</td>
+                    </tr>
+                </table>
+            </div>
+            -->
+            
+        </div> 
+        <div id="menu1" class="menu">
+            <h2>未來36hr各縣市降雨機率比較</h2>
+            請選擇時間 : 
+            <select name="" id="time1" class="time">
+                <option value="0"></option>
+                <option value="1"></option>
+                <option value="2"></option>
+            </select>
+            <input type="button" value="送出" onclick="rainchandatamov()"> 
+        </div>
+        <div class="rainchan">
+            <!-- <div class="rainchanitem">
+                <div class="barcolumn">
+                    <div class="chancebar">
+                        
+                    </div>
+                    <div class="chancetext">90%</div>
+                </div>
+                <div class="raincity">
+                    基隆市
+                </div>
+            </div> -->
+            
+        </div>
+        <div id="menu2" class="menu">
+            <h2>自動氣象站觀測資料</h2>
+            請選擇縣市 : 
+            <select name="" id="city1" class="city" onchange="changeobscity()">
+                <option value="臺北市">臺北市</option>       
+                <option value="新北市">新北市</option>
+                <option value="基隆市">基隆市</option>
+                <option value="桃園市">桃園市</option>
+                <option value="新竹市">新竹市</option>
+                <option value="新竹縣">新竹縣</option>
+                <option value="苗栗縣">苗栗縣</option>
+                <option value="臺中市">臺中市</option>
+                <option value="彰化縣">彰化縣</option>
+                <option value="南投縣">南投縣</option>
+                <option value="雲林縣">雲林縣</option>
+                <option value="嘉義市">嘉義市</option>
+                <option value="嘉義縣">嘉義縣</option>
+                <option value="臺南市">臺南市</option>
+                <option value="高雄市">高雄市</option>
+                <option value="屏東縣">屏東縣</option>
+                <option value="宜蘭縣">宜蘭縣</option>
+                <option value="花蓮縣">花蓮縣</option>
+                <option value="臺東縣">臺東縣</option>
+                <option value="澎湖縣">澎湖縣</option>
+                <option value="金門縣">金門縣</option>
+                <option value="連江縣">連江縣</option>
+            </select>
+            請選擇觀測站 : 
+            <select name="" id="observatory" class="observatory">
+                
+            </select>
+            <input type="button" value="送出" onclick="changeobsdata()">
+        </div>
+        <div id="obseavadata" class="obseavadata">
+            <h1 class="observatitle">
+                尚無查詢任何資料
+            </h1>
+            <table class="obseavadata1">
+                
+            </table>
+            <div class="remark">備註 :　-99 皆表示 該時刻因故無資料</div>
+        </div>
+        <div id="backtotop" class="backtotop" onclick="backtotop();">&uarr;</div> 
+    </div>
+    <script src="JqLibruary/jquery-3.6.0.min.js"></script>
+    <script src="Js_Jquery/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="Locationdata.js"></script>
+    
+    
+</body>
+</html>

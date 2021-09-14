@@ -1,0 +1,203 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );    }
+li{
+    list-style: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.header{
+    background-image: linear-gradient( 105.3deg,  rgba(30,39,107,1) 21.8%, rgba(77,118,221,1) 100.2% );;
+    font-weight: bold;
+    font-size: 32px;
+    color: white;
+    padding: 10px 20px;
+}
+.app{
+    padding: 10px 20px;
+    display: none;
+}
+
+.app .menu{
+    margin: 20px 0px;
+    margin-bottom: 30px;
+}
+.app .menu h2{
+    margin-bottom: 10px;
+}
+.app .menu select{
+    width: 15%;
+    padding: 5px 8px;
+    margin-right: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.app .menu .time{
+    width: 25%;
+}
+input[type="button"]{
+    padding: 5px 8px;
+    font-size: 16px;
+    margin-right: 12px;
+    border: 2px solid #aaaaaa;
+    background-color: green;
+    color: white;
+    border-radius: 2px;
+}
+input[type="button"]:hover{
+    color: yellow;
+    opacity: .8;
+}
+/* .app .databox li{
+    margin: 5px;
+} */
+.app .databox{
+    width: 85%;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.app .databox .dataitem{
+    flex: auto;
+    width: 21%;
+    margin: 0px 5px 10px 5px;
+    padding: 10px 10px 5px 10px;
+    background-color: white;
+    box-shadow: 3px 3px 3px 2px #999999;
+}
+.app .databox .dataitem img{
+    height: 160px;
+}
+.app .databox .dataitem h2{
+    padding: 5px 0px;
+}
+.app .databox .dataitem table tr td{
+    padding: 5px 0px;
+}
+.app .databox .dataitem table tr td:first-child{
+    font-weight: bold;
+}
+.app .databox .dataitem table tr td:last-child{
+    padding-left: 5px;
+}
+.app .newest{
+    border: 2px solid #ff00ff;
+}
+/* .app .dataimport{
+    text-align: center;
+    border-collapse: collapse;
+}
+.app .dataimport{
+    width: 70%;
+}
+.app .dataimport tr td{
+    padding: 5px;
+    border: 1px solid black;
+}
+.app .dataimport tr:first-child{
+    font-weight: bold;
+    font-size: 18px;
+    color: yellow;
+    background-color: #0080ff;
+}
+.blue{
+    background-color: blue;
+} */
+.app .rainchan{
+    /* padding: 10px; */
+    width: 85%;
+    background-color: #eeeeee;
+    display: flex;
+}
+.app .rainchan .rainchanitem{
+    flex: auto;
+    width: 5%;
+    /* height: 300px; */
+    
+}
+.app .rainchan .rainchanitem .barcolumn{
+    height: 340px;
+    border-top: 1px solid black;
+    transform:rotate(180deg);
+    /* border: 1px solid black; */
+}
+.app .rainchan .rainchanitem .barcolumn .chancebar{
+    height: 60%;
+    width: 35%;
+    margin: auto;
+    /* text-align: center; */
+    background-color: blue;
+    
+}
+.app .rainchan .rainchanitem .raincity{
+    /* height: 100px; */
+    padding: 12px 0px;
+    /* width: 100%; */
+    /* text-align: center; */
+    margin: auto;
+    font-size: 18px;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+    /* border: 1px solid black; */
+
+}
+.app .rainchan .rainchanitem .barcolumn .chancetext{
+    /* height: 100%; */
+    transform: rotate(-180deg);
+    /* writing-mode: vertical-lr; */
+    text-align: center;
+    margin-top: 10px;
+    /* background-color: yellow; */
+}
+.app .obseavadata{
+    width: 85%;
+    margin: 10px 0px;
+    padding: 20px 10px;
+    color: white;
+    background-color: #222222;
+    font-weight: bold;
+    position: relative;
+}
+.app .obseavadata h1{
+    margin-bottom: 8px;
+    display: flex;
+}
+.app .obseavadata h1 .observatorynam{
+    margin-right: 20px;
+    padding: 6px 8px;
+    background-color: red;
+    border-radius: 12px;
+}
+.app .obseavadata h1 .observatorynam1{
+    background-color: blue;
+}
+.app .obseavadata h1 .observatorynam2{
+    background-color: green;
+}
+.app .obseavadata h1 .observatoryid{
+    font-size: 20px;
+    color: hotpink;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.app .obseavadata .obseavadata1{
+    width: 100%;
+    font-size: 18px;
+}
+.app .obseavadata .obseavadata1 tr td{
+    padding: 16px 5px;
+    /* border: 1px solid white; */
+}
+.app .obseavadata .obseavadata1 tr td:nth-child(odd){
+    color: yellow;
+}
+/* .app .obseavadata .remark{
+    font-size: 20px;
+} */
